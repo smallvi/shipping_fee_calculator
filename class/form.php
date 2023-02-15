@@ -251,47 +251,12 @@ class FORM {
 		</div>";
   }
 
-  public static function SelectOption($id="",$input_name="",$required=0,$selectText="Select",$labelText="Select",$select_value,$size=""){
-    if($required=="" or $required==0){
-      $required_text = "";
-      $required_asterisk = "";
-    } else {
-      $required_text = "required" ;
-      $required_asterisk = "<span class='text-danger' style='font-weight:bold;'>*</span>";
-    }
+  
 
-		if($required==0){
-			$requiredText = "";
-		} else if ($required==1){
-			$requiredText = "required";
-		}
-
-    if($size == ""){
-      $size = "form-control" ;
-    } else if ($size == "s"){
-      $size = "form-control-sm" ;
-    } else if($size == "l"){
-      $size = "form-control-lg" ;
-    }
-
-    $count_select_value = count($select_value);
-    echo "
-		<label for='{$id}'> {$required_asterisk} {$labelText}:</label>
-		<select id='{$id}' class='form-select mb-3 {$size}' aria-label='Default select example' name='{$input_name}' {$required_text}>
-			<option value=''>{$selectText}</option>" ;
-			for( $r = 0 ; $r < $count_select_value ; $r++ ){
-        if($select_value[$r] == "SEA"){
-          echo "<option selected='selected' value='{$select_value[$r]}'>{$select_value[$r]}</option>" ;
-        }
-        else {
-          echo "<option value='{$select_value[$r]}'>{$select_value[$r]}</option>" ;
-        }
-
-			}
-		echo "</select>";
-  }
-
-  public static function SelectOption2Dimension($id="",$input_name="",$class_name="",$required=0,$selectText="Select",$labelText="Select",$select_value){
+  public static function SelectOption2Dimension($id,$input_name,$class_name,$required,$selectText,$labelText,$select_value){
+    
+    $selectText = "Select";
+    $labelText="Select";
     if($required=="" or $required==0){
       $required_text = "";
       $required_asterisk = "";
@@ -318,4 +283,3 @@ class FORM {
   }
 
 }
-?>
