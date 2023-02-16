@@ -20,16 +20,19 @@ class CALCULATOR {
   public static $max_kg_sp_ddp201 = 10;
 
   //海运大货 - 仓库自提
+  public static $unit_price_sea_lp_hub_tier_0 = 150;
   public static $unit_price_sea_lp_hub_tier_a = 380;
   public static $unit_price_sea_lp_hub_tier_b = 370;
   public static $unit_price_sea_lp_hub_tier_c = 360;
 
   //海运大货 - Klang Valley 派送
+  public static $unit_price_sea_lp_kv_tier_0 = 170;
   public static $unit_price_sea_lp_kv_tier_a = 400;
   public static $unit_price_sea_lp_kv_tier_b = 390;
   public static $unit_price_sea_lp_kv_tier_c = 380;
 
   //海运大货 - West Malaysia 派送
+  public static $unit_price_sea_lp_wm_tier_0 = 180;
   public static $unit_price_sea_lp_wm_tier_a = 410;
   public static $unit_price_sea_lp_wm_tier_b = 400;
   public static $unit_price_sea_lp_wm_tier_c = 390;
@@ -161,7 +164,7 @@ class CALCULATOR {
 
   public static function Calc_Sea_LP_hub($m3){
     if($m3 <= self::$min_m3_sea_lp){
-      return 0.3 * self::$unit_price_sea_lp_hub_tier_a  ;
+      return self::$unit_price_sea_lp_hub_tier_0  ;
     }
     else if ($m3 > self::$min_m3_sea_lp and $m3 < self::$m3_sea_lp_tier_a) {
       return $m3 * self::$unit_price_sea_lp_hub_tier_a  ;
@@ -176,7 +179,7 @@ class CALCULATOR {
 
   public static function Calc_Sea_LP_KV($m3){
     if($m3 <= self::$min_m3_sea_lp){
-      return 0.3 * self::$unit_price_sea_lp_kv_tier_a  ;
+      return self::$unit_price_sea_lp_kv_tier_0  ;
     }
     else if ($m3 > self::$min_m3_sea_lp and $m3 < self::$m3_sea_lp_tier_a) {
       return $m3 * self::$unit_price_sea_lp_kv_tier_a  ;
@@ -191,7 +194,7 @@ class CALCULATOR {
 
   public static function Calc_Sea_LP_WM($m3){
     if($m3 <= self::$min_m3_sea_lp){
-      return 0.3 * self::$unit_price_sea_lp_wm_tier_a  ;
+      return self::$unit_price_sea_lp_wm_tier_0  ;
     }
     else if ($m3 > self::$min_m3_sea_lp and $m3 < self::$m3_sea_lp_tier_a) {
       return $m3 * self::$unit_price_sea_lp_wm_tier_a  ;
