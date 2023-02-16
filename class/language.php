@@ -129,14 +129,14 @@
   $language["CN"]["TABLE_COL_KG"] = "公斤";
   $language["EN"]["TABLE_COL_KG"] = "KG";
 
-  $language["CN"]["TABLE_COL_LENGTH"] = "长";
-  $language["EN"]["TABLE_COL_LENGTH"] = "Length";
+  $language["CN"]["TABLE_COL_LENGTH"] = "长 (CM)";
+  $language["EN"]["TABLE_COL_LENGTH"] = "Length (CM)";
 
-  $language["CN"]["TABLE_COL_WIDTH"] = "宽";
-  $language["EN"]["TABLE_COL_WIDTH"] = "Width";
+  $language["CN"]["TABLE_COL_WIDTH"] = "宽 (CM)";
+  $language["EN"]["TABLE_COL_WIDTH"] = "Width (CM)";
 
-  $language["CN"]["TABLE_COL_HEIGHT"] = "高";
-  $language["EN"]["TABLE_COL_HEIGHT"] = "Height";
+  $language["CN"]["TABLE_COL_HEIGHT"] = "高 (CM)";
+  $language["EN"]["TABLE_COL_HEIGHT"] = "Height (CM)";
 
   //Title
   $language["CN"]["TITLE_SHIPPING_FEE_CALCULATOR"] = "运费计算机";
