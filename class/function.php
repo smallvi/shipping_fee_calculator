@@ -788,3 +788,11 @@ function mandatoryField($field_name, $mandatory = 0)
 	}
 	echo $field_name;
 }
+
+function dd($obj)
+{
+	echo "<pre>";
+	var_dump($obj);
+	echo "</pre>";
+	die();
+}
