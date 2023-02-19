@@ -38,9 +38,9 @@ class CALCULATOR {
   public static $unit_price_sea_lp_wm_tier_c = 390;
 
   //海运大货设定
-  public static $min_m3_sea_lp = 0.3;
-  public static $m3_sea_lp_tier_a = 1;
-  public static $m3_sea_lp_tier_b = 5;
+  public static $min_m3_sea_lp = 0.2999;
+  public static $m3_sea_lp_tier_a = 0.9999;
+  public static $m3_sea_lp_tier_b = 4.9999;
 
   //空运 普货 不包税
   public static $unit_price_air_sp_normal_a = 23.50 ;
@@ -163,31 +163,33 @@ class CALCULATOR {
   }
 
   public static function Calc_Sea_LP_hub($m3){
+    //dd($m3);
     if($m3 <= self::$min_m3_sea_lp){
       return self::$unit_price_sea_lp_hub_tier_0  ;
     }
-    else if ($m3 > self::$min_m3_sea_lp and $m3 < self::$m3_sea_lp_tier_a) {
+    else if ($m3 > self::$min_m3_sea_lp and $m3 <= self::$m3_sea_lp_tier_a) {
       return $m3 * self::$unit_price_sea_lp_hub_tier_a  ;
     }
-    else if ($m3 >= self::$m3_sea_lp_tier_a and $m3 < self::$m3_sea_lp_tier_b) {
+    else if ($m3 > self::$m3_sea_lp_tier_a and $m3 <= self::$m3_sea_lp_tier_b) {
       return $m3 * self::$unit_price_sea_lp_hub_tier_b  ;
     }
-    else if ($m3 >= self::$m3_sea_lp_tier_b) {
+    else if ($m3 > self::$m3_sea_lp_tier_b) {
       return $m3 * self::$unit_price_sea_lp_hub_tier_c  ;
     }
   }
 
   public static function Calc_Sea_LP_KV($m3){
+    //dd($m3);
     if($m3 <= self::$min_m3_sea_lp){
       return self::$unit_price_sea_lp_kv_tier_0  ;
     }
-    else if ($m3 > self::$min_m3_sea_lp and $m3 < self::$m3_sea_lp_tier_a) {
+    else if ($m3 > self::$min_m3_sea_lp and $m3 <= self::$m3_sea_lp_tier_a) {
       return $m3 * self::$unit_price_sea_lp_kv_tier_a  ;
     }
-    else if ($m3 >= self::$m3_sea_lp_tier_a and $m3 < self::$m3_sea_lp_tier_b) {
+    else if ($m3 > self::$m3_sea_lp_tier_a and $m3 <= self::$m3_sea_lp_tier_b) {
       return $m3 * self::$unit_price_sea_lp_kv_tier_b  ;
     }
-    else if ($m3 >= self::$m3_sea_lp_tier_b) {
+    else if ($m3 > self::$m3_sea_lp_tier_b) {
       return $m3 * self::$unit_price_sea_lp_kv_tier_c  ;
     }
   }
@@ -196,13 +198,13 @@ class CALCULATOR {
     if($m3 <= self::$min_m3_sea_lp){
       return self::$unit_price_sea_lp_wm_tier_0  ;
     }
-    else if ($m3 > self::$min_m3_sea_lp and $m3 < self::$m3_sea_lp_tier_a) {
+    else if ($m3 > self::$min_m3_sea_lp and $m3 <= self::$m3_sea_lp_tier_a) {
       return $m3 * self::$unit_price_sea_lp_wm_tier_a  ;
     }
-    else if ($m3 >= self::$m3_sea_lp_tier_a and $m3 < self::$m3_sea_lp_tier_b) {
+    else if ($m3 > self::$m3_sea_lp_tier_a and $m3 <= self::$m3_sea_lp_tier_b) {
       return $m3 * self::$unit_price_sea_lp_wm_tier_b  ;
     }
-    else if ($m3 >= self::$m3_sea_lp_tier_b) {
+    else if ($m3 > self::$m3_sea_lp_tier_b) {
       return $m3 * self::$unit_price_sea_lp_wm_tier_c  ;
     }
   }

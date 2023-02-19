@@ -87,7 +87,7 @@ if($_POST["shipping_type"] == "LARGE PARCEL"){
       <div class='alert alert-warning alert-dismissible fade show' role='alert'>
         🔴 <strong>{$language[$locale]["MSG_MIN_SPEND"]} 0.3 M3</strong>
       </div>";
-    $total_chr_value = 0.3;
+    $total_chr_value = 0.2999;
   }
 }
 ?>
